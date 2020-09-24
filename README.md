@@ -5,6 +5,7 @@ React Native Test.
 ## Quick Overview
 
  - Demo application for React Native Test.
+ - Fetch data every 10s from server with pagination.
 
 ## Start an App
 
