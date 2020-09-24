@@ -6,6 +6,7 @@ React Native Test.
 
  - Demo application for React Native Test.
  - Fetch data every 10s from server with pagination.
+ - APK & IPA files available in builds folder
 
 ## Start an App
 
