@@ -56,7 +56,7 @@ class Home extends Component {
         const newData = data.slice(totalDataInList, totalDataInList + 20);
 
         if (postData.length > flatListData.length) {
-            this.setState({ flatListData: [...flatListData, ...data], totalDataInList: totalDataInList + 20 });
+            this.setState({ flatListData: [...flatListData, ...newData], totalDataInList: totalDataInList + 20 });
         }
 
     }
@@ -95,7 +95,7 @@ class Home extends Component {
                         )
                     }}
                     showsVerticalScrollIndicator={false}
-                    keyExtractor={(item) => item.objectID}
+                    keyExtractor={(item, index) => item.objectID + index}
                     onEndReached={this.loadMore}
                 />
             </View>
