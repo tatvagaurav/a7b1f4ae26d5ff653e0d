@@ -12,7 +12,7 @@ class Detail extends Component {
     render() {
         const { navigation } = this.props;
         const { item } = this.state;
-        console.log(this.props)
+
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', margin: 16 }}>
                 <Text>{JSON.stringify(item)}</Text>

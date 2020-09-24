@@ -22,7 +22,7 @@ class Home extends Component {
         if (!isTimmerStarted) {
             const { currentPage, postData } = this.state;
             axios.get(`https://hn.algolia.com/api/v1/search_by_date?tags=story&page=${currentPage}`).then(result => {
-                //console.log('result', result);
+
                 this.setState({
                     isTimmerStarted: true,
                     loader: false,
@@ -39,7 +39,7 @@ class Home extends Component {
                 const { currentPage, postData } = this.state;
                 if (currentPage < 50) {
                     axios.get(`https://hn.algolia.com/api/v1/search_by_date?tags=story&page=${currentPage}`).then(result => {
-                        console.log('result', result);
+
                         this.setState({ currentPage: currentPage + 1, postData: [...postData, ...result.data.hits] })
                     })
                 }
@@ -54,7 +54,7 @@ class Home extends Component {
         const { postData, totalDataInList, flatListData } = this.state;
         const data = [...postData];
         const newData = data.slice(totalDataInList, totalDataInList + 20);
-        console.log('newData', data, newData);
+
         if (postData.length > flatListData.length) {
             this.setState({ flatListData: [...flatListData, ...data], totalDataInList: totalDataInList + 20 });
         }
@@ -75,7 +75,7 @@ class Home extends Component {
                 </View >
             )
         }
-        console.log('flatListData', this.state)
+
         return (
             <View style={{ margin: 16 }}>
                 <FlatList
